@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Praktikum Grundlagen der Pinguine"/>
+
+    <link rel="stylesheet" href="/static/css/tutor/style.css"/>
+
+    <link rel="icon" href="/static/svg/user-graduate-solid.svg">
+
+    <title>Julius Kreutz</title>
+</head>
+
+<body>
+
+<nav>
+    <header>
+        <a th:href="@{/}" class="icon"><img src="/static/svg/jk.svg" alt="jk logo"/></a>
+    </header>
+    <div class="left">
+        <a th:href="@{/about}">Über mich</a>
+        <div class="theme-dropdown">
+            <a href="#">Tutorien</a>
+            <div class="dropdown">
+                <a href="#">pgdp</a>
+                <a th:href="@{/gad}">gad</a>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <a href="#">Theme</a>
+    </div>
+</nav>
+
+<main>
+    <h2>PGDP</h2>
+
+    <h3>Nützliche links</h3>
+
+    <p><a href="https://bbb.in.tum.de/jul-69q-hpx" target="_blank" rel="noopener">Tutorübung + Hausaufgabenbesprechung</a></p>
+    <p><a href="https://www.moodle.tum.de/course/view.php?id=53358" target="_blank" rel="noopener">Moodle</a></p>
+    <p><a href="https://zulip.in.tum.de/" target="_blank" rel="noopener">Zulip Chat</a></p>
+    <p><a href="https://artemis.ase.in.tum.de/#/courses/83/exercises" target="_blank" rel="noopener">Artemis</a></p>
+    <p><a href="https://shop.stecrz.de/altklausuren/" target="_blank" rel="noopener">Altklausuren</a></p>
+    <p><a th:href="@{/files/pgdp}"> Files</a></p>
+
+    <h3>Wichtige downloads</h3>
+
+    <p><a href="https://www.oracle.com/java/technologies/javase-jdk15-downloads.html" target="_blank" rel="noopener">JDK 15</a></p>
+    <p><a href="https://www.jetbrains.com/de-de/idea/download/" target="_blank" rel="noopener">Intellij</a>
+        <a class="link" href="https://www.jetbrains.com/shop/eform/students" target="_blank" rel="noopener">
+            (Student ultimate version application)</a></p>
+    <p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></p>
+</main>
+
+<footer>
+    <div>
+        <a href="https://discordapp.com/users/246684413075652612" class="icon">
+            <img src="/static/svg/discord.svg" alt="discord logo"/></a>
+    </div>
+    <div>
+        <a href="https://github.com/JuliusKreutz" class="icon">
+            <img src="/static/svg/github-brands.svg" alt="github logo"/></a>
+    </div>
+    <div>
+        <a href="mailto:jk@julius-kreutz.de" class="icon">
+            <img src="/static/svg/at-solid.svg" alt="email logo"/></a>
+    </div>
+</footer>
+
+</body>
+
+</html>

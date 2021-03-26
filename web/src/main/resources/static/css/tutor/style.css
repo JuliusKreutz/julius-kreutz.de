@@ -1,0 +1,129 @@
+:root {
+  --text-color: #d0cfd8;
+  --background-color: #36353e;
+  --background-color-dark: #222227;
+  --highlight-color: #a82dd1;
+  --filter: invert(100%) sepia(44%) saturate(1542%) hue-rotate(181deg)
+    brightness(92%) contrast(83%);
+  --filter-hovered: invert(23%) sepia(80%) saturate(2888%) hue-rotate(275deg)
+    brightness(89%) contrast(93%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+body {
+  background: var(--background-color);
+}
+
+main {
+  padding: 3rem 5rem;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+
+p {
+  padding: 5px;
+}
+
+a:hover {
+  color: var(--highlight-color);
+}
+
+.icon img {
+  filter: var(--filter);
+}
+
+.icon img:hover {
+  filter: var(--filter-hovered);
+}
+
+nav {
+  height: 70px;
+  background: var(--background-color-dark);
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+nav header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right {
+  padding-right: 5rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+footer {
+  padding: 0 20rem;
+  height: 70px;
+  width: 100%;
+
+  background: var(--background-color-dark);
+
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+}
+
+footer .icon img {
+  height: 2.5rem;
+}
+
+footer .icon img:hover {
+  transform: scale(1.1);
+}
+
+.theme-dropdown .dropdown {
+  position: fixed;
+  margin-top: 40px;
+  padding: 15px 0;
+  border-radius: 10px;
+  background-color: var(--background-color-dark);
+  transform: translateX(-50px);
+
+  pointer-events: none;
+  
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+}
+
+.dropdown a {
+  padding: 0 25px;
+}
+
+.theme-dropdown:focus-within .dropdown {
+  opacity: 1;
+  pointer-events: all;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Upload">
+
+    <title>File Upload</title>
+
+    <link rel="icon" href="/static/svg/cloud_upload.svg">
+
+    <link href="/static/css/other/upload.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<form id="upload" method="post" th:action="@{/upload}" enctype="multipart/form-data">
+    <div id="drop">
+        Drop Here
+
+        <a>Browse</a>
+        <input type="file" name="file" multiple />
+    </div>
+
+    <ul>
+        <!-- The file uploads will be shown here -->
+    </ul>
+
+</form>
+
+<!-- JavaScript Includes -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/static/js/other/jquery.knob.js"></script>
+
+<!-- jQuery File Upload Dependencies -->
+<script src="/static/js/other/jquery.ui.widget.js"></script>
+<script src="/static/js/other/jquery.iframe-transport.js"></script>
+<script src="/static/js/other/jquery.fileupload.js"></script>
+
+<!-- Main JS file -->
+<script src="/static/js/other/script.js"></script>
+
+</body>
+</html>
